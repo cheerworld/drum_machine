@@ -1,0 +1,38 @@
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#drum-machine {
+  outline: 5px solid pink;
+  position: relative;
+  width: 660px;
+  text-align: center;
+  background-color: #b3b3b3;
+}
+
+.drum-pad {
+  font-weight: bold;
+}
+
+.pad-bank {
+  width: 332px;
+  height: 272px;
+  display: inline-block;
+  margin: 20px;
+}
+
+#drum-machine .pad-bank .drum-pad {
+  position: relative;
+  float: left;
+  width: 100px;
+  height: 80px;
+  margin-right: 10px;
+  border-radius: 5px;
+  padding-top: 30px;
+  box-sizing: border-box;
+  cursor: pointer;
+}

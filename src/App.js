@@ -14,9 +14,11 @@ function App() {
       document.addEventListener("keydown", (e) => {
         e.preventDefault();
         notes.forEach((note) => {
-          if (note.key.toLowerCase() === e.key) {
-            new Audio(note.src).play();
+          if (note.key.toUpperCase() === e.key.toUpperCase()) {
+            document.getElementById(note.key.toUpperCase()).play();
 
+            setDisplayKey(note.name)
+            
             const target = document.getElementById(note.name);
             target.style.backgroundColor = "skyblue";
             target.style.marginTop = "13px";
@@ -55,7 +57,7 @@ function App() {
   ];
 
   const audioOnClick = (e, note) => {
-    new Audio(note.src).play();
+    document.getElementById(note.key).play();
 
     setDisplayKey(note.name)
 
